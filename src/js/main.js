@@ -78,13 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
     const loader = document.getElementById('page-loader');
     
-    // Smoothly exit once the page is ready
-    setTimeout(() => {
-        loader.classList.add('fade-out');
-        
-        // Remove from DOM after transition to save memory
+    // This 'if' check protects the code from crashing if the loader isn't on the page
+    if (loader) {
         setTimeout(() => {
-            loader.style.display = 'none';
-        }, 800);
-    }, 2200); // 2.2s allows the "boot" animation to finish
+            loader.classList.add('fade-out');
+            
+            // Remove from view after the 0.8s CSS transition finishes
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 800);
+        }, 2200); 
+    }
 });
