@@ -487,6 +487,7 @@ h1, h2, h3, .navbar-brand {
         gap: 10px; // Spacing between images
         padding-right: 80px;
         height: 100%;
+        width: 100%;
 
             .collage-item {
                 overflow: hidden;
@@ -704,75 +705,98 @@ h1, h2, h3, .navbar-brand {
     }
 }
 
+//mission adn visoin section
+.mission-vision {
+  background: #ffffff;
 
-.mission-vision-slab {
-    background-color: #ffffff !important;
-    padding: 40px 0; // Reduced section padding
+  .mv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 360px;
+    border: 1px solid #C1C1C180;
+  }
 
-    .mission-vision-wrapper {
-        display: block; 
-        overflow: hidden;
-        background-color: #ffffff;
-        
-        .border-start, .border-end, .border-top, .border-bottom {
-            border-color: #eeeeee !important;
-        }
+  .mv-card {
+    position: relative;
+    padding: 40px;
+    // border: 1px solid #e5e5e5;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  /* TEXT BLOCK */
+  .mv-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+
+    .label {
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+      color: #AAAAAA;
+      margin-bottom: 10px;
+      font-family: monospace;
     }
 
-    .row {
-        height: 300px; // FORCED HEIGHT: Adjust this number to make it even shorter
-        margin: 0;
-
-        @media (max-width: 991px) {
-            height: auto; // Allow expansion on mobile so text doesn't cut off
-        }
+    .dot {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 6px;
+      height: 6px;
+      background: red;
+      border-radius: 50%;
     }
 
-    .mission-img-wrapper {
-        height: 100%; // Fill the 300px row
-        width: 100%;
-        overflow: hidden;
-        display: flex;
-        align-items: bottom;
-        justify-content: bottom;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            object-position: bottom;
-        }
+    h3 {
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #000000;
     }
 
-    // Tightened Typography to fit the shorter height
-    h2 {
-        color: #000000 !important;
-        font-size: 1.5rem; // Smaller header
-        font-weight: 700;
-        margin-bottom: 0.5rem !important;
+    p {
+      font-size: 0.9rem;
+      color: #AAAAAA;
+      line-height: 1.5;
+      max-width: 90%;
+    }
+  }
+
+  /* IMAGE BLOCK */
+  .mv-image {
+    padding: 0;
+
+    .img-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        #ddd,
+        #bbb
+      );
+    }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .mv-grid {
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
     }
 
-    .mission-description {
-        color: #4a4a4a !important;
-        line-height: 1.5; 
-        font-size: 0.95rem; // Slightly smaller text
-        margin: 0;
-        display: -webkit-box;
-        -webkit-line-clamp: 3; // Prevents text from pushing the box taller
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+    .mv-card {
+      height: auto;
+      padding: 30px;
     }
 
-    .tech-label {
-        color: #888888 !important;
-        font-size: 0.75rem;
-        letter-spacing: 0.1em;
-        font-family: monospace;
+    .mv-image .img-placeholder {
+      height: 220px;
     }
+  }
 }
 
 
+//services section
 .services-list-slab {
     // The technical vertical line with nodes
     .service-vertical-line {
@@ -809,6 +833,152 @@ h1, h2, h3, .navbar-brand {
     }
 }
 
+.services-breakdown-slab {
+    background-color: #ffffff !important;
+
+    .service-accent-line {
+        width: 4px;
+        background-color: #eeeeee; // Matches the blueprint borders
+        flex-shrink: 0;
+    }
+
+    h2 {
+        color: #000000 !important;
+        font-size: 1.8rem;
+        letter-spacing: -0.02em;
+    }
+
+    h5 {
+        font-size: 1.1rem;
+        letter-spacing: -0.01em;
+    }
+
+    .service-list {
+        li {
+            color: #777777 !important;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 20px;
+
+            // The custom bullet dots from the image
+            &::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                color: #cccccc; // Muted grey dot
+                font-size: 1.2rem;
+                line-height: 1;
+            }
+        }
+    }
+
+    .mission-description {
+        max-width: 900px;
+        line-height: 1.7;
+    }
+}
+
+
+.team-section {
+    background-color: #EDE9FF;
+    padding: 100px 0;
+    overflow: hidden;
+
+    
+    .tech-label-container {
+        border-top: 1px solid rgba(0,0,0,0.1);
+        padding-top: 2rem;
+    }
+
+    .tech-label-top {
+        color: #000000 !important;
+    }
+
+    .tech-label{
+        color: #AAAAAA !important;
+    }
+
+    .description-text {
+        color: #AAAAAA !important;
+        line-height: 1.3;
+        font-size: 1rem;
+    }
+
+    .team-ticker {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding-bottom: 60px;
+    }
+
+    .team-track {
+        display: flex;
+        width: max-content;
+        animation: teamScroll 40s linear infinite; // Adjust time for speed
+
+        &:hover {
+            animation-play-state: paused; // Stops when you look closely
+        }
+    }
+
+    .team-group {
+        display: flex;
+        gap: 15px; // Gap between cards
+        padding-right: 15px; // Gap between the two groups
+    }
+
+    .team-card {
+        flex: 0 0 350px; // Fixed width for cards
+        height: 450px;
+        background: #d1d1d1;
+        position: relative;
+        overflow: hidden;
+
+        .member-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: #fff;
+            white-space: normal; // Allows text to wrap inside cards
+        }
+
+        small {
+            color: #AAAAAA;
+            font-family: $font-family-monospace;
+        }
+
+        p {
+            color:#000000;
+            line-height: 1.2;
+            letter-spacing: -0.00em;
+            font-size: 0.85rem;
+        } 
+        
+        h4 {
+            color:#000000;
+            font-weight: 600;
+        }
+    }
+}
+
+// Seamless Animation
+@keyframes teamScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); // Moves exactly one full group width
+    }
+}
 
 
 
