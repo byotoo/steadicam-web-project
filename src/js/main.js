@@ -62,3 +62,29 @@ const handleNavbarScroll = () => {
 
 window.addEventListener('scroll', handleNavbarScroll);
 window.addEventListener('load', handleNavbarScroll);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log("Form submitted safely!");
+            // Add your email handling logic here
+        });
+    }
+});
+
+window.addEventListener('load', () => {
+    const loader = document.getElementById('page-loader');
+    
+    // Smoothly exit once the page is ready
+    setTimeout(() => {
+        loader.classList.add('fade-out');
+        
+        // Remove from DOM after transition to save memory
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 800);
+    }, 2200); // 2.2s allows the "boot" animation to finish
+});
