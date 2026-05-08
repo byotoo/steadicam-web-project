@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Steadicam Productions | Accra</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./scss/styles.scss">
+</head>
+
+<body>
+
+    <div id="page-loader" class="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader-viewfinder">
+                <span class="corner tl"></span>
+                <span class="corner tr"></span>
+                <span class="corner bl"></span>
+                <span class="corner br"></span>
+            </div>
+            
+            <div class="loader-text-container">
+                <div class="d-flex align-items-center justify-content-center mb-2">
+                    <span class="rec-dot-loader pulse me-2"></span>
+                    <span class="text-mono small tracking-widest text-white">SYSTEM BOOT: STEADICAM_V2.0</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="d-flex justify-content-between mt-1">
+                    <span class="text-mono tiny text-white-50">ISO 800</span>
+                    <span class="text-mono tiny text-white-50">24FPS</span>
+                    <span class="text-mono tiny text-white-50">4K_RAW</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container px-md-5">
+            <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" href="#">Steadicam</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#movieNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="movieNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="services-overview">
+            <div class="container py-lg-5">
+                <div class="row align-items-center">
+                    
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <div class="status-indicator d-flex align-items-center mb-3">
+                            <span class="rec-dot"></span>
+                            <span class="status-text text-mono">OUR MOST RECENT WORKS</span>
+                        </div>
+                        <h1 class="main-title-text fw-bold mb-4">Services</h1>
+                        <p class="lead-service-text mb-5">
+                            Through continuous growth and a client-focused <br> approach, we strive to make a meaningful impact in every <br> project we undertake—one story, one event, and one <br> experience at a time.
+                        </p>
+                        <a href="contact.html" class="btn-steadicam">
+                            WORK WITH US
+                        </a>
+                    </div>
+
+                    <!-- RIGHT COLLAGE -->
+                    <div class="col-lg-7">
+                        
+                        <div class="collage-wrapper">
+
+                            <div class="collage-column left-column">
+
+                                <div class="collage-item top-img">
+                                    <img src="/assets/images/productions/production-1.jpg" alt="">
+                                </div>
+
+                                <div class="collage-item bottom-img">
+                                    <img src="/assets/images/productions/production-2.jpg" alt="">
+                                </div>
+
+                            </div>
+
+                            <div class="collage-column center-column">
+
+                                <div class="collage-item top-img">
+                                    <img src="/assets/images/productions/production-3.jpg" alt="">
+                                </div>
+
+                                <div class="collage-item bottom-img">
+                                    <img src="/assets/images/productions/production-3.jpg" alt="">
+                                </div>
+
+                            </div>
+
+                            <div class="collage-column right-column">
+
+                                <div class="collage-item small-top">
+                                    <img src="/assets/images/productions/production-4.jpg" alt="">
+                                </div>
+
+                                <div class="collage-item large-middle">
+                                    <img src="/assets/images/productions/production-5.jpg" alt="">
+                                </div>
+
+                                <div class="collage-item small-bottom">
+                                    <img src="/assets/images/productions/production-3.jpg" alt="">
+                                </div>
+
+                            </div>
+
+                            <!-- FADES -->
+                            <div class="fade-top"></div>
+                            <div class="fade-bottom"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="recent-videos-section py-5">
+            <div class="container mb-4">
+                <div class="d-flex justify-content-between align-items-end">
+                    <h2 class="section-title fw-bold">Recent videos</h2>
+                    <div class="status-indicator d-flex align-items-center">
+                        <span class="status-dot"></span>
+                        <span class="status-service-text text-uppercase">Production Services</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper video-swiper">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                        <div class="video-card">
+                            <video class="video-player" autoplay muted loop playsinline>
+                                <source src="/assets/videos/vid1.webm" type="video/webm">
+                            </video>
+                            <div class="video-overlay">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="video-card">
+                            <video class="video-player" autoplay muted loop playsinline>
+                                <source src="/assets/videos/vid2.webm" type="video/webm">
+                            </video>
+                            <div class="video-overlay">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="video-card">
+                            <video class="video-player" autoplay muted loop playsinline>
+                                <source src="/assets/videos/vid3.webm" type="video/webm">
+                            </video>
+                            <div class="video-overlay">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="video-card">
+                            <video class="video-player" autoplay muted loop playsinline>
+                                <source src="/assets/videos/vid4.webm" type="video/webm">
+                            </video>
+                            <div class="video-overlay">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="video-card">
+                            <video class="video-player" autoplay muted loop playsinline>
+                                <source src="/assets/videos/vid5.webm" type="video/webm">
+                            </video>
+                            <div class="video-overlay">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="container">
+                <div class="section-header mb-4">
+                    <h2>What we do</h2>
+                    <p>Every frame we deliver is the output of a controlled pipeline.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-number-wrap">
+                            <span class="service-number">01</span>
+                            <span class="service-label">Production Services</span>
+                        </div>
+                        <h3 class="service-title">Production services</h3>
+                        <ul class="service-list">
+                            <li>Live streaming and live broadcasting</li>
+                            <li>Live audio recording and mixing, and post-production editing</li>
+                            <li>Podcast recording and editing</li>
+                            <li>Event videography</li>
+                            <li>Drone Coverage</li>
+                            <li>Photography (Event, Corporate/Commercial, Specialised, Portraits)</li>
+                            <li>Stage and set designing (LED Screens, Stage, Trusses)</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-number-wrap">
+                            <span class="service-number">02</span>
+                            <span class="service-label">Event Support &amp;<br>Management</span>
+                        </div>
+                        <h3 class="service-title">Event Support and Management</h3>
+                        <ul class="service-list">
+                            <li>Event planning and execution</li>
+                            <li>On-site technical support and equipment operation</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-number-wrap">
+                            <span class="service-number">03</span>
+                            <span class="service-label">Creatives Services</span>
+                        </div>
+                        <h3 class="service-title">Creative and Graphic Design Services</h3>
+                        <ul class="service-list">
+                            <li>Digital Marketing</li>
+                            <li>Social Media Content Creation</li>
+                            <li>Social Media Management</li>
+                            <li>Visual Identity</li>
+                            <li>Collateral Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-md-4">
+                    <h3 class="footer-brand mb-3">Steadicam</h3>
+                    <p class="footer-bio pe-md-5">
+                        A full-service production company delivering live streams, stage productions and flawless events for ambitious brands worldwide.
+                    </p>
+                    <div class="footer-socials d-flex gap-3 mt-4">
+                        <a href="#" class="social-circle"></a>
+                        <a href="#" class="social-circle"></a>
+                        <a href="#" class="social-circle"></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 class="footer-heading mb-4">Studio</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="mb-5">
+                        <h5 class="footer-heading mb-4">Working hours</h5>
+                        <p class="footer-text mb-1">Monday to Friday, 9:00am-6:00pm</p>
+                        <a href="#" class="footer-link text-decoration-underline text-white opacity-75">Weekends – (By Appointment Only)</a>
+                    </div>
+
+                    <div>
+                        <h5 class="footer-heading mb-4">Locate us</h5>
+                        <p class="footer-text">34 Kisseiman Street, Kisseiman,<br>Accra, Ghana.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom py-4">
+                <p class="mb-0">
+                    <span class="fw-bold">© Steadicam Productions</span> All Rights Reserved. 2026
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+
+</body>
+</html>

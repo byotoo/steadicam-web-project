@@ -2,7 +2,7 @@
 $primary: #6367FF;
 $secondary: #ffffff;
 $dark: #000000;
-$body-bg: #000;
+$body-bg: #ffffff;
 $body-color: #ffffff;
 $navbar-dark-color: rgba(255,255,255,0.9);
 $navbar-dark-active-color: #ffffff;
@@ -1174,6 +1174,697 @@ $brand-blue: #6366f1;
         }
     }
 }
+
+
+
+
+/* =========================================================================
+   SERVICES PAGE
+========================================================================= 
+*/
+
+.services-overview {
+
+    padding: 200px 0 100px 0; 
+    background-color: $secondary;
+    
+    .status-text {
+        font-size: 1.3rem;
+        letter-spacing: 0px;
+        color: #AAAAAA;
+        font-weight: 400;
+    }
+
+    .main-title-text {
+        color: #000000;
+    }
+
+    .lead-service-text {
+        color: #AAAAAA;
+    }
+
+    .btn-steadicam {
+        background-color: $primary;
+        color: white;
+        padding: 15px 35px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        font-family: $font-family-monospace;
+        display: inline-block;
+        transition: all 0.3s ease;
+        border: none;
+
+        &:hover {
+            background-color: darken($brand-blue, 10%);
+            transform: translateY(-2px);
+        }
+    }
+
+    // THE COLLAGE LOGIC
+    
+    // THE GRID (Inside the wrapper, behind the mask)
+    .collage-wrapper {
+        position: relative;
+        display: flex;
+        gap: 10px;
+        height: 490px;
+        overflow: hidden;
+
+        .collage-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* LEFT COLUMN */
+        .left-column {
+            width: 32%;
+
+            .top-img {
+                height: 65%;
+            }
+
+            .bottom-img {
+                height: 35%;
+            }
+        }
+
+        /* CENTER COLUMN */
+        .center-column {
+            width: 33%;
+
+            .tall-img {
+                height: 100%;
+            }
+        }
+
+        /* RIGHT COLUMN */
+        .right-column {
+            width: 35%;
+
+            .small-top {
+                height: 18%;
+            }
+
+            .large-middle {
+                height: 52%;
+            }
+
+            .small-bottom {
+                height: 30%;
+            }
+        }
+
+        .collage-item {
+            overflow: hidden;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+
+                transition: transform 0.5s ease;
+            }
+
+            &:hover img {
+                transform: scale(1.05);
+            }
+        }
+
+        /* TOP FADE */
+        .fade-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            z-index: 5;
+            pointer-events: none;
+
+            background: linear-gradient(
+                to bottom,
+                rgba(245,245,245,1),
+                rgba(245,245,245,0)
+            );
+        }
+
+        /* BOTTOM FADE */
+        .fade-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            z-index: 5;
+            pointer-events: none;
+
+            background: linear-gradient(
+                to top,
+                rgba(245,245,245,1),
+                rgba(245,245,245,0)
+            );
+        }
+    }
+}
+
+// Mobile adjust
+@media (max-width: 991px) {
+    .collage-grid {
+        margin-top: 50px;
+        .collage-item.tall { height: 300px; }
+    }
+}
+
+
+
+//video slider section
+
+.recent-videos-section {
+    background-color: $lavender; 
+    padding: 80px 0;
+    width: 100%;
+    overflow: hidden; // Prevents the peeking videos from causing a horizontal scrollbar
+
+    .section-title {
+        color: #000000;
+        font-size: 1.5rem;
+    }
+
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #ff0000;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .status-service-text {
+        color: #AAAAAA;
+        font-size: 1rem;
+        letter-spacing: 0px;
+        font-family: $font-family-monospace;
+    }
+
+    .video-swiper {
+        padding: 40px 0 80px 0; // Padding for the pop-out and dots
+        position: relative;
+
+        // THE PEEK FIX: Forces the swiper to stretch beyond the Bootstrap container
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        
+        .swiper-slide {
+            transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+            opacity: 0.4; // Peekers are faded
+            transform: scale(0.85); // Peekers are smaller
+            filter: blur(2px);
+            transition:
+            transform 0.6s ease,
+            opacity 0.6s ease,
+            filter 0.6s ease;
+
+            transform: scale(0.88);
+
+            opacity: 0.45;
+
+            filter: blur(2px);
+            
+            &.swiper-slide-active {
+                
+                transform: scale(1.02);
+
+                opacity: 1;
+
+                filter: blur(0px);
+
+                z-index: 10;
+            }
+        }
+
+        .swiper-slide-prev,
+        .swiper-slide-next {
+
+            opacity: 0.75;
+
+            filter: blur(1px);
+
+            transform: scale(0.92);
+        }
+    }
+
+    .video-card {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        aspect-ratio: 16 / 9;
+        background: #000;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+
+        .video-player {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+
+            display: block;
+
+            backface-visibility: hidden;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            pointer-events: none;
+
+            .bi-play-circle-fill {
+                font-size: 4.5rem;
+                color: rgba(255, 255, 255, 0.8);
+                filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.4));
+                transition: transform 0.3s ease;
+            }
+        }
+    }
+
+    // --- CUSTOM PAGINATION DOTS ---
+    .swiper-pagination {
+        bottom: 30px !important;
+
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background: #BBBBBB;
+            opacity: 1;
+            margin: 0 6px !important;
+            transition: all 0.4s ease;
+
+            &-active {
+                background: $primary;
+                width: 26px; // Transforms into a pill
+                border-radius: 6px;
+            }
+        }
+    }
+}
+
+// Ensure responsive heights for the cards
+@media (max-width: 768px) {
+    .recent-videos-section .video-card {
+        border-radius: 6px;
+    }
+
+    .what-we-do-section {
+        .what-we-do-grid {
+            display: block;
+        }
+
+        .what-card {
+            border-left: none !important;
+            padding: 32px 24px;
+        }
+    }
+}
+
+
+
+/* =========================================================================
+   WHAT WE DO SECTION
+========================================================================= */
+/* =========================================================================
+   SERVICES SECTION (With connected lines)
+========================================================================= */
+.services-section {
+    margin: 0 auto;
+    padding: 100px 0 200px 0;
+    background-color: $secondary !important;
+    overflow-x: hidden; // Keeps viewport clean from infinite horizontal lines
+}
+
+.section-header {
+    margin-bottom: 48px;
+
+    h2 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #000000;
+        margin-bottom: 8px;
+        letter-spacing: -0.02em;
+    }
+
+    p {
+        font-size: 19px;
+        color: #AAAAAA;
+        font-weight: 400;
+    }
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    position: relative;
+
+    // --- INFINITE TOP LINE ---
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50vw; 
+        right: -50vw; 
+        height: 1px;
+        background-color: #C1C1C180;
+        z-index: 1;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -50vw; 
+        right: -50vw; 
+        height: 1px;
+        background-color: #C1C1C180;
+        z-index: 1;
+    }
+}
+
+.service-card {
+    padding: 40px 32px; 
+    position: relative;
+    
+    // Aligns outermost text boundaries perfectly with container limits
+    &:first-child {
+        padding-left: 0;
+    }
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+// --- CONNECTED VERTICAL DIVIDER LINES ---
+.service-card:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;       // Changed from 40px to 0 to connect cleanly with the top line
+    bottom: 0; // Retains breathing room at the bottom of the section
+    width: 1px;
+    background: #C1C1C180;
+    z-index: 2;   // Ensures perfect layering alignment
+}
+
+.service-number-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.service-number {
+    font-size: 56px;
+    font-weight: 900;
+    color: #AAAAAA;
+    line-height: 1;
+    font-family: $font-family-monospace;
+    letter-spacing: -0.04em;
+}
+
+.service-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 19px;
+    font-weight: 500;
+    color: #999;
+    text-transform: uppercase;
+    font-family: $font-family-monospace;
+    line-height: 1.4;
+}
+
+.service-label::before {
+    content: '';
+    display: inline-block;
+    width: 10px; 
+    height: 10px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+    animation: blink-red 1.5s infinite;
+} 
+
+@keyframes blink-red {
+    0% { opacity: 1; box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
+    50% { opacity: 0.3; box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+    100% { opacity: 1; box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
+
+.service-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.service-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.service-list li {
+    position: relative;
+    padding-left: 14px;
+    font-size: 14px;
+    color: #AAAAAA;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.service-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #999;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card:not(:last-child)::after {
+        display: none;
+    }
+
+    .service-card {
+        border-bottom: 1px solid #C1C1C180;
+        padding: 40px 0;
+    }
+
+    .service-number {
+        font-size: 48px;
+    }
+}
+
+
+
+/* =========================================================================
+   PORTFOLIO PAGE
+========================================================================= 
+*/
+
+.portfolio-intro {
+    padding: 260px 0 40px 0; // Space for the sticky navbar
+    background-color: #ffffff !important;
+
+    .portfolio-title{
+        color: #000000 !important; // A true black for the headline
+        font-size: 2.5rem;
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+    }
+
+    .text-top-mini {
+        color: #AAAAAA !important;
+        font-family: $font-family-monospace;
+        font-size: 1.2rem;
+        font-weight: 200;
+        letter-spacing: -0.01em;
+    }
+}
+
+.project-section {
+    background-color: #EDE9FF;
+    padding: 100px 0;
+    overflow: hidden;
+
+    .project-card-top{
+        padding-bottom: 40px;
+
+        .status-project-text {
+            color: #AAAAAA;
+            font-size: 1rem;
+            letter-spacing: 0px;
+            font-family: $font-family-monospace;
+        }
+
+        .project-title {
+            color: #000000;
+            font-size: 1.5rem;
+        }
+    }
+
+    .project-info {
+        margin-top: 48px;
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            font-size: 19px;
+            color: #AAAAAA;
+            font-weight: 400;
+        }
+    }
+    
+    .project-label-container {
+        border-top: 1px solid rgba(0,0,0,0.1);
+        padding-top: 2rem;
+    }
+
+    .project-label-top {
+        color: #000000 !important;
+    }
+
+    .project-label{
+        color: #AAAAAA !important;
+    }
+
+    .project-description-text {
+        color: #AAAAAA !important;
+        line-height: 1.3;
+        font-size: 1rem;
+    }
+
+    .project-ticker {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding-bottom: 60px;
+    }
+
+    .project-track {
+        display: flex;
+        width: max-content;
+        animation: projectScroll 40s linear infinite; // Adjust time for speed
+
+        &:hover {
+            animation-play-state: paused; // Stops when you look closely
+        }
+    }
+
+    .project-ticker.ticker-reverse .project-track {
+        animation: projectScroll 40s linear infinite reverse; // Same loop, reverse direction
+    }
+
+    .project-group {
+        display: flex;
+        gap: 15px; // Gap between cards
+        padding-right: 15px; // Gap between the two groups
+    }
+
+    .project-card {
+        flex: 0 0 350px; // Fixed width for cards
+        height: 450px;
+        background: #d1d1d1;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+
+        img.project-card-img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .member-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, transparent 80%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .member-overlay small {
+            color: #FFFFFF;
+            font-family: $font-family-monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+        }
+
+        .member-overlay h4 {
+            color: #ffffff;
+            margin: 0.35rem 0 0.6rem;
+            font-size: 1.1rem;
+            line-height: 1.2;
+        }
+
+        .member-overlay p {
+            color: rgba(255,255,255,0.9);
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+        }
+    }
+}
+
+// Seamless Animation
+@keyframes projectScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); // Moves exactly one full group width
+    }
+}
+
+
 
 
 /* =========================================================================
