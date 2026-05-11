@@ -4,23 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Steadicam Productions | Accra</title>
+    <meta name="description" content="Learn about Steadicam Productions – our mission, vision, team, and the services we offer in Accra, Ghana.">
+    <title>About | Steadicam Productions</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script type="module" crossorigin src="/steadicam-web-project/assets/main-6VBbEpyb.js"></script>
-  <link rel="stylesheet" crossorigin href="/steadicam-web-project/assets/main-CqVQQdp3.css">
+
+  <script type="module" crossorigin src="/steadicam-web-project/assets/main-DqVt4_X_.js"></script>
+  <link rel="stylesheet" crossorigin href="/steadicam-web-project/assets/main-Dirx-cCu.css">
 </head>
 
 <body>
 
-    <div id="page-loader" class="loader-wrapper">
+    <!-- Skip to main content (accessibility) -->
+    <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 p-3 bg-primary text-white" style="z-index:10000">Skip to main content</a>
+
+    <!-- Page Loader -->
+    <div id="page-loader" class="loader-wrapper" aria-hidden="true">
         <div class="loader-content">
             <div class="loader-viewfinder">
                 <span class="corner tl"></span>
@@ -28,7 +31,6 @@
                 <span class="corner bl"></span>
                 <span class="corner br"></span>
             </div>
-            
             <div class="loader-text-container">
                 <div class="d-flex align-items-center justify-content-center mb-2">
                     <span class="rec-dot-loader pulse me-2"></span>
@@ -46,201 +48,152 @@
         </div>
     </div>
 
+    <!-- Site Header -->
     <header class="site-header">
-        <div class="container px-md-5">
-            <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
-                <div class="container-fluid">
-                    <a class="navbar-brand fw-bold" href="#">Steadicam</a>
+        <nav class="navbar navbar-expand-lg navbar-dark custom-nav" aria-label="Main navigation">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="index.html">Steadicam</a>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#movieNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                <button
+                    class="navbar-toggler border-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#movieNav"
+                    aria-controls="movieNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <div class="collapse navbar-collapse" id="movieNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
+                <div class="collapse navbar-collapse" id="movieNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        
-        <section class="about-intro pt-12 pb-10 bg-white">
+    <main id="main-content">
+
+        <!-- About Intro -->
+        <section class="about-intro bg-white">
             <div class="container">
-                <div class="mb-2">
+                <div class="mb-3">
                     <span class="text-mono text-uppercase small d-flex align-items-center text-dark-grey fw-bold">
-                        <span class="rec-dot bg-danger me-2"></span> WHO WE ARE
+                        <span class="rec-dot bg-danger me-2" aria-hidden="true"></span> WHO WE ARE
                     </span>
                 </div>
 
-                <h1 class="display-3 fw-bold text-dark mb-3">About Steadicam</h1>
+                <h1 class="display-3 fw-bold text-dark mb-4">About Steadicam</h1>
 
                 <div class="row">
                     <div class="col-lg-10">
-                        <div class="about-description">
-                            <p class="lead fw-normal mb-3 about-text">
-                                Steadicam is a creative powerhouse committed to delivering exceptional experiences through innovative storytelling, technical excellence, and strategic event execution.
-                            </p>
-                            <p class="mb-3 about-text">
-                                With a diverse portfolio spanning corporate events, conferences, concerts, filming, documentaries, and promotional content, Steadicam combines creativity with cutting-edge technology to produce high-quality audio-visual and video experiences.
-                            </p>
-                            <p class="mb-3 about-text">
-                                At the core of our work is a passion for excellence and a client-focused approach. We collaborate closely with individuals, brands, and organizations to understand their vision and bring it to life with precision and flair.
-                            </p>
-                            <p class="about-text">
-                                From concept development to final execution, our experienced team ensures every project is handled with professionalism, creativity, and attention to detail. With a reputation for reliability and innovation, Steadicam continues to set new standards in the creative and events industry.
-                            </p>
-                        </div>
+                        <p class="lead fw-normal mb-3 about-text">
+                            Steadicam is a creative powerhouse committed to delivering exceptional experiences through innovative storytelling, technical excellence, and strategic event execution.
+                        </p>
+                        <p class="mb-3 about-text">
+                            With a diverse portfolio spanning corporate events, conferences, concerts, filming, documentaries, and promotional content, Steadicam combines creativity with cutting-edge technology to produce high-quality audio-visual and video experiences.
+                        </p>
+                        <p class="mb-3 about-text">
+                            At the core of our work is a passion for excellence and a client-focused approach. We collaborate closely with individuals, brands, and organisations to understand their vision and bring it to life with precision and flair.
+                        </p>
+                        <p class="about-text">
+                            From concept development to final execution, our experienced team ensures every project is handled with professionalism, creativity, and attention to detail. With a reputation for reliability and innovation, Steadicam continues to set new standards in the creative and events industry.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- <section class="mission-vision-slab bg-white py-10">
-            <div class="container">
-                <div class="mission-vision-wrapper">
-                    <div class="row g-0 align-items-stretch">
-                        <div class="col-lg-6 d-flex align-items-top bg-white p-4 border-start border-top border-bottom">
-                            <div class="w-100">
-                                <div class="d-flex justify-content-between align-items-center mb-4">
-                                    <span class="tech-label text-mono text-uppercase small">Mission</span>
-                                    <span class="rec-dot bg-danger"></span>
-                                </div>
-                                <h2 class="fw-bold text-dark mb-2">Our shared Mission</h2>
-                                <p class="mission-description">To deliver exceptional event and media solutions that consistently exceed <br> 
-                                expectations by combining technical expertise with creative execution.<br>
-                                We transform ideas into engaging, high-quality productions that create.<br>
-                                meaningful and lasting impact.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 border-top border-end border-bottom">
-                            <div class="mission-img-wrapper">
-                                <img src="/assets/images/about/drone-mission.jpg" class="img-fluid" alt="Mission">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row g-0 align-items-stretch flex-row-reverse">
-                        <div class="col-lg-6 d-flex align-items-top bg-white p-4 border-end border-bottom">
-                            <div class="w-100">
-                                <div class="d-flex justify-content-between align-items-center mb-4">
-                                    <span class="tech-label text-mono text-uppercase small">Vision</span>
-                                    <span class="rec-dot bg-danger"></span>
-                                </div>
-                                <h2 class="fw-bold text-dark mb-2">Our shared Vision</h2>
-                                <p class="mission-description">To deliver exceptional event and media solutions that consistently exceed <br> 
-                                expectations by combining technical expertise with creative execution.<br>
-                                We transform ideas into engaging, high-quality productions that create.<br>
-                                meaningful and lasting impact.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 border-start border-bottom">
-                            <div class="mission-img-wrapper">
-                                <img src="/assets/images/about/vision-team.jpg" class="" alt="Vision">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <section class="mission-vision py-5">
+        <!-- Mission & Vision Grid -->
+        <section class="mission-vision py-5" aria-labelledby="mv-heading">
+            <h2 id="mv-heading" class="visually-hidden">Mission and Vision</h2>
             <div class="container">
                 <div class="mv-grid">
 
-                <!-- TOP LEFT (TEXT) -->
-                <div class="mv-card mv-text">
-                    
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <span class="label">MISSION</span>
-                        <span class="rec-dot bg-danger"></span>
+                    <!-- Mission text -->
+                    <div class="mv-card mv-text">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <span class="label">MISSION</span>
+                            <span class="rec-dot bg-danger" aria-hidden="true"></span>
+                        </div>
+                        <h3>Our shared Mission</h3>
+                        <p>
+                            To deliver exceptional event and media solutions that consistently exceed expectations by combining technical expertise with creative execution.
+                            We transform ideas into engaging, high-quality productions that create meaningful and lasting impact.
+                        </p>
                     </div>
 
-                    <h3>Our shared Mission</h3>
-                    <p>
-                    To deliver exceptional event and media solutions that consistently exceed expectations by combining technical expertise with creative execution.
-                    We transform ideas into engaging, high-quality productions that create meaningful and lasting impact.
-                    </p>
-                </div>
-
-                <!-- TOP RIGHT (IMAGE) -->
-                <div class="mv-card mv-image">
-                    <div class="img-placeholder">
-                        <img src="/steadicam-web-project/assets/drone-mission-DCevHW68.jpg" class="img-fluid" alt="Mission">
-                    </div>
-                </div>
-
-                <!-- BOTTOM LEFT (IMAGE) -->
-                <div class="mv-card mv-image">
-                    <div class="img-placeholder">
-                        <img src="/steadicam-web-project/assets/vision-team-DjcZgBuN.jpg" class="img-fluid" alt="Vision">
-                    </div>
-                </div>
-
-                <!-- BOTTOM RIGHT (TEXT) -->
-                <div class="mv-card mv-text">
-                    
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <span class="label">VISION</span>
-                        <span class="rec-dot bg-danger"></span>
+                    <!-- Mission image -->
+                    <div class="mv-card mv-image">
+                        <div class="img-placeholder">
+                            <img src="/steadicam-web-project/assets/drone-mission-DCevHW68.jpg" loading="lazy" alt="Drone shot capturing a live production mission">
+                        </div>
                     </div>
 
-                    <h3>Our shared Vision</h3>
-                    <p>
-                    To deliver exceptional event and media solutions that consistently exceed expectations by combining technical expertise with creative execution.
-                    We transform ideas into engaging, high-quality productions that create meaningful and lasting impact.
-                    </p>
-                </div>
+                    <!-- Vision image -->
+                    <div class="mv-card mv-image">
+                        <div class="img-placeholder">
+                            <img src="/steadicam-web-project/assets/vision-team-DjcZgBuN.jpg" loading="lazy" alt="Steadicam team collaborating on a production">
+                        </div>
+                    </div>
+
+                    <!-- Vision text -->
+                    <div class="mv-card mv-text">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <span class="label">VISION</span>
+                            <span class="rec-dot bg-danger" aria-hidden="true"></span>
+                        </div>
+                        <h3>Our shared Vision</h3>
+                        <p>
+                            To be the most trusted creative production partner in West Africa — redefining what's possible in live events, media, and storytelling through technical mastery and authentic collaboration.
+                        </p>
+                    </div>
 
                 </div>
             </div>
-            </section>
+        </section>
 
-        <section class="services-breakdown-slab py-10 bg-white">
+        <!-- What We Do -->
+        <section class="services-breakdown-slab py-10 bg-white" aria-labelledby="whatwedo-heading">
             <div class="container">
-                <div class="row mb-4">
+                <div class="row mb-5">
                     <div class="col-lg-10">
-                        <div class="d-flex gap-4">
-                            <div>
-                                <h2 class="fw-bold text-dark mb-3">What we do</h2>
-                                <p class="mission-description text-dark-grey">
-                                    Through continuous growth and a client-focused approach, we strive to make a meaningful impact in every project we undertake—one story, 
-                                    one project, and one experience at a time.
-                                </p>
-                            </div>
-                        </div>
+                        <h2 id="whatwedo-heading" class="fw-bold text-dark mb-3">What we do</h2>
+                        <p class="mission-description text-dark-grey">
+                            Through continuous growth and a client-focused approach, we strive to make a meaningful impact in every project we undertake—one story, one project, and one experience at a time.
+                        </p>
                     </div>
                 </div>
 
                 <div class="row g-5">
                     <div class="col-md-4">
-                        <h5 class="fw-bold text-dark mb-4">Production services</h5>
+                        <h3 class="fw-bold text-dark mb-4">Production services</h3>
                         <ul class="service-list list-unstyled">
                             <li>Live streaming and live broadcasting</li>
                             <li>Live audio recording and mixing, and post-production editing</li>
                             <li>Podcast recording and editing</li>
                             <li>Event videography</li>
                             <li>Drone Coverage</li>
-                            <li>Photography (Event, Corporate/ Commercial, Specialised, Portraits)</li>
+                            <li>Photography (Event, Corporate/Commercial, Specialised, Portraits)</li>
                             <li>Stage and set designing (LED Screens, Stage, Trusses)</li>
                         </ul>
                     </div>
 
                     <div class="col-md-4">
-                        <h5 class="fw-bold text-dark mb-4">Event Support and Management</h5>
+                        <h3 class="fw-bold text-dark mb-4">Event Support and Management</h3>
                         <ul class="service-list list-unstyled mb-5">
                             <li>Event planning and execution</li>
                             <li>On-site technical support and equipment operation</li>
                         </ul>
 
-                        <h5 class="fw-bold text-dark mb-4">Other Services</h5>
+                        <h3 class="fw-bold text-dark mb-4">Other Services</h3>
                         <ul class="service-list list-unstyled">
                             <li>Procurement and installation of multimedia equipment</li>
                             <li>Curated training programmes</li>
@@ -249,7 +202,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <h5 class="fw-bold text-dark mb-4">Creative and Graphic Design Services</h5>
+                        <h3 class="fw-bold text-dark mb-4">Creative and Graphic Design Services</h3>
                         <ul class="service-list list-unstyled">
                             <li>Digital Marketing</li>
                             <li>Social Media Content Creation</li>
@@ -262,155 +215,135 @@
             </div>
         </section>
 
-        <section class="team-section py-10">
+        <!-- Meet the Team -->
+        <section class="team-section" id="teamSection" aria-labelledby="team-heading">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2 class="display-5 tech-label-top fw-bold mb-1">Meet the Team</h2>
-                        <p class="text-dark-grey w-50 mb-5 description-text">
+                        <h2 id="team-heading" class="display-5 tech-label-top fw-bold mb-2">Meet the Team</h2>
+                        <p class="mb-5 description-text">
                             From live streaming to documentary storytelling and stage design, we bring your vision to life with precision, creativity, and flawless execution.
                         </p>
                         <div class="tech-label-container d-flex align-items-center mb-3">
-                            <span class="rec-dot me-2"></span>
+                            <span class="rec-dot me-2" aria-hidden="true"></span>
                             <span class="text-mono text-uppercase small tech-label">OUR ESTEEMED WORKERS</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="team-ticker">
+            <!-- Infinite team ticker -->
+            <div class="team-ticker" aria-hidden="true">
                 <div class="team-track">
                     <div class="team-group">
                         <div class="team-card">
                             <div class="member-overlay p-4">
-                                <small><span class="rec-dot me-2"></span>CTO & CO-FOUNDER</small>
+                                <small><span class="rec-dot me-2"></span>CTO &amp; CO-FOUNDER</small>
                                 <h4>Samuel Obuobisa-Darko</h4>
-                                <p>Peter leads Steadicam with a focus on clarity, execution, and growth. With a background
-                                across business development, project management, and production, he brings
-                                structure to creativity and direction to every project.</p>
-                                <p>Vision. Strategy. Leadership.</p>
+                                <p>Samuel brings deep technical expertise to every production, leading Steadicam's technology strategy and infrastructure with precision and vision.</p>
                             </div>
                         </div>
                         <div class="team-card">
                             <div class="member-overlay p-4">
-                                <small><span class="rec-dot me-2"></span>CEO & CO-FOUNDER</small>
+                                <small><span class="rec-dot me-2"></span>CEO &amp; CO-FOUNDER</small>
                                 <h4>Peter C.N Kotei</h4>
-                                <p>Peter leads Steadicam with a focus on clarity, execution, and growth. With a background
-                                across business development, project management, and production, he brings
-                                structure to creativity and direction to every project.</p>
-                                <p>Vision. Strategy. Leadership.</p>
+                                <p>Peter leads Steadicam with a focus on clarity, execution, and growth. He brings structure to creativity and direction to every project.</p>
                             </div>
                         </div>
                         <div class="team-card">
                             <div class="member-overlay p-4">
                                 <small><span class="rec-dot me-2"></span>FILMMAKER</small>
                                 <h4>Kwesi Dickson Oyiadjo</h4>
-                                <p>Peter leads Steadicam with a focus on clarity, execution, and growth. With a background
-                                across business development, project management, and production, he brings
-                                structure to creativity and direction to every project.</p>
-                                <p>Vision. Strategy. Leadership.</p>
+                                <p>Kwesi's cinematic eye transforms briefs into compelling visual narratives across documentary, event, and commercial production.</p>
                             </div>
                         </div>
                         <div class="team-card">
                             <div class="member-overlay p-4">
                                 <small><span class="rec-dot me-2"></span>LEAD PHOTOGRAPHER</small>
                                 <h4>Nana Osei Adu-Boahene</h4>
-                                <p>Peter leads Steadicam with a focus on clarity, execution, and growth. With a background
-                                across business development, project management, and production, he brings
-                                structure to creativity and direction to every project.</p>
-                                <p>Vision. Strategy. Leadership.</p>
+                                <p>Nana captures the decisive moment with technical mastery, producing stills that carry the same energy as the events themselves.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="team-group">
+                    <!-- Duplicate group for seamless infinite loop -->
+                    <div class="team-group" aria-hidden="true">
                         <div class="team-card">
                             <div class="member-overlay p-4">
-                                <small><span class="rec-dot me-2"></span>CTO & CO-FOUNDER</small>
+                                <small><span class="rec-dot me-2"></span>CTO &amp; CO-FOUNDER</small>
                                 <h4>Samuel Obuobisa-Darko</h4>
-                                <p>Peter leads Steadicam with a focus on clarity, execution, and growth. With a background
-                                across business development, project management, and production, he brings
-                                structure to creativity and direction to every project.</p>
-                                <p>Vision. Strategy. Leadership.</p>
+                                <p>Samuel brings deep technical expertise to every production, leading Steadicam's technology strategy and infrastructure with precision and vision.</p>
                             </div>
                         </div>
                         <div class="team-card">
                             <div class="member-overlay p-4">
-                                <small><span class="rec-dot me-2"></span>CEO & CO-FOUNDER</small>
+                                <small><span class="rec-dot me-2"></span>CEO &amp; CO-FOUNDER</small>
                                 <h4>Peter C.N Kotei</h4>
-                                <p>Peter leads Steadicam with a focus on clarity, execution, and growth. With a background
-                                across business development, project management, and production, he brings
-                                structure to creativity and direction to every project.</p>
-                                <p>Vision. Strategy. Leadership.</p>
+                                <p>Peter leads Steadicam with a focus on clarity, execution, and growth. He brings structure to creativity and direction to every project.</p>
                             </div>
                         </div>
                         <div class="team-card">
                             <div class="member-overlay p-4">
                                 <small><span class="rec-dot me-2"></span>FILMMAKER</small>
                                 <h4>Kwesi Dickson Oyiadjo</h4>
-                                <p>Peter leads Steadicam with a focus on clarity, execution, and growth. With a background
-                                across business development, project management, and production, he brings
-                                structure to creativity and direction to every project.</p>
-                                <p>Vision. Strategy. Leadership.</p>
+                                <p>Kwesi's cinematic eye transforms briefs into compelling visual narratives across documentary, event, and commercial production.</p>
                             </div>
                         </div>
                         <div class="team-card">
                             <div class="member-overlay p-4">
                                 <small><span class="rec-dot me-2"></span>LEAD PHOTOGRAPHER</small>
                                 <h4>Nana Osei Adu-Boahene</h4>
-                                <p>Peter leads Steadicam with a focus on clarity, execution, and growth. With a background
-                                across business development, project management, and production, he brings
-                                structure to creativity and direction to every project.</p>
-                                <p>Vision. Strategy. Leadership.</p>
+                                <p>Nana captures the decisive moment with technical mastery, producing stills that carry the same energy as the events themselves.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
+        <!-- CTA -->
         <section class="cta-slab py-10 bg-white text-dark">
             <div class="container">
-                <div class="cta-box position-relative overflow-hidden">
+                <div class="cta-box position-relative">
                     <div class="row g-0 align-items-stretch">
-                        
+
                         <div class="col-lg-6 p-5 p-md-7 position-relative z-2">
-                            <span class="mb-3 text-mono d-block text-uppercase text-white cta-label">
-                                <span class="rec-dot bg-danger"></span> LETS BUILD IT
+                            <span class="mb-3 text-mono d-flex align-items-center text-uppercase text-white cta-label">
+                                <span class="rec-dot bg-danger" aria-hidden="true"></span> LETS BUILD IT
                             </span>
-                            <h1 class="display-3 fw-bold text-white mb-4">
+                            <h2 class="display-3 fw-bold text-white mb-4">
                                 Have a show on the horizon?
-                            </h1>
-                            <p class="cta-text text-white opacity-90 mb-5">
-                                Tell us about it. We’re the right team to deliver it.
+                            </h2>
+                            <p class="cta-text text-white mb-5">
+                                Tell us about it. We're the right team to deliver it.
                             </p>
                             <a href="contact.html" class="btn btn-primary btn-lg px-5 text-mono">START YOUR ENQUIRY</a>
                         </div>
 
-                        <div class="col-lg-5 d-none d-lg-block">
+                        <div class="col-lg-6" aria-hidden="true">
                             <div class="cta-collage-grid h-100">
-                                <div class="collage-item item-main">
-                                    <img src="/steadicam-web-project/assets/production-1-Cwxe76_u.jpg" alt="Production">
+                                <div class="collage-item">
+                                    <img src="/steadicam-web-project/assets/production-1-Cwxe76_u.jpg" alt="" loading="lazy">
                                 </div>
                                 <div class="collage-item">
-                                    <img src="/steadicam-web-project/assets/production-2-CVwVjBEf.jpg" alt="Production">
+                                    <img src="/steadicam-web-project/assets/production-2-CVwVjBEf.jpg" alt="" loading="lazy">
                                 </div>
                                 <div class="collage-item">
-                                    <img src="/steadicam-web-project/assets/production-3-vI8W63oE.jpg" alt="Production">
+                                    <img src="/steadicam-web-project/assets/production-3-vI8W63oE.jpg" alt="" loading="lazy">
                                 </div>
                                 <div class="collage-item">
-                                    <img src="/steadicam-web-project/assets/production-4-D9k7G3aG.jpg" alt="Production">
+                                    <img src="/steadicam-web-project/assets/production-4-D9k7G3aG.jpg" alt="" loading="lazy">
                                 </div>
                                 <div class="collage-item">
-                                    <img src="/steadicam-web-project/assets/production-3-vI8W63oE.jpg" alt="Production">
+                                    <img src="/steadicam-web-project/assets/production-5-BHNvO4bl.jpg" alt="" loading="lazy">
                                 </div>
                                 <div class="collage-item">
-                                    <img src="/steadicam-web-project/assets/production-4-D9k7G3aG.jpg" alt="Production">
+                                    <img src="/steadicam-web-project/assets/p1-K3LAWrJK.jpg" alt="" loading="lazy">
                                 </div>
                                 <div class="collage-item">
-                                    <img src="/steadicam-web-project/assets/production-3-vI8W63oE.jpg" alt="Production">
+                                    <img src="/steadicam-web-project/assets/p2-BzDaCsyw.jpg" alt="" loading="lazy">
                                 </div>
                                 <div class="collage-item">
-                                    <img src="/steadicam-web-project/assets/production-4-D9k7G3aG.jpg" alt="Production">
+                                    <img src="/steadicam-web-project/assets/p3-DTSbDZh9.jpg" alt="" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -419,28 +352,27 @@
                 </div>
             </div>
         </section>
-        
-
 
     </main>
 
-    <footer class="site-footer">
+    <!-- Footer -->
+    <footer class="site-footer" aria-label="Site footer">
         <div class="container">
             <div class="row gy-5">
                 <div class="col-md-4">
-                    <h3 class="footer-brand mb-3">Steadicam</h3>
-                    <p class="footer-bio pe-md-5">
+                    <p class="footer-brand mb-3">Steadicam</p>
+                    <p class="footer-bio pe-md-4">
                         A full-service production company delivering live streams, stage productions and flawless events for ambitious brands worldwide.
                     </p>
                     <div class="footer-socials d-flex gap-3 mt-4">
-                        <a href="#" class="social-circle"></a>
-                        <a href="#" class="social-circle"></a>
-                        <a href="#" class="social-circle"></a>
+                        <a href="#" class="social-circle" aria-label="Facebook"><span aria-hidden="true"></span></a>
+                        <a href="#" class="social-circle" aria-label="Instagram"><span aria-hidden="true"></span></a>
+                        <a href="#" class="social-circle" aria-label="YouTube"><span aria-hidden="true"></span></a>
                     </div>
                 </div>
 
                 <div class="col-md-3">
-                    <h5 class="footer-heading mb-4">Studio</h5>
+                    <h2 class="footer-heading mb-4">Studio</h2>
                     <ul class="list-unstyled footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
@@ -452,14 +384,15 @@
 
                 <div class="col-md-5">
                     <div class="mb-5">
-                        <h5 class="footer-heading mb-4">Working hours</h5>
-                        <p class="footer-text mb-1">Monday to Friday, 9:00am-6:00pm</p>
-                        <a href="#" class="footer-link text-decoration-underline text-white opacity-75">Weekends – (By Appointment Only)</a>
+                        <h2 class="footer-heading mb-4">Working hours</h2>
+                        <p class="footer-text mb-1">Monday to Friday, 9:00am–6:00pm</p>
+                        <p class="footer-text">Weekends – <span class="text-white opacity-75">By Appointment Only</span></p>
                     </div>
-
                     <div>
-                        <h5 class="footer-heading mb-4">Locate us</h5>
-                        <p class="footer-text">34 Kisseiman Street, Kisseiman,<br>Accra, Ghana.</p>
+                        <h2 class="footer-heading mb-4">Locate us</h2>
+                        <address class="footer-text" style="font-style:normal;">
+                            34 Kisseiman Street, Kisseiman,<br>Accra, Ghana.
+                        </address>
                     </div>
                 </div>
             </div>
@@ -473,7 +406,7 @@
             </div>
         </div>
     </footer>
-
+
 
 </body>
 </html>
